@@ -11,13 +11,13 @@ variable "aws_region" {
 }
 
 variable "aws_owner" {
-    ## AWS Owner for created objects
+    ## AWS Owner tag for created objects
     type = string
     default = "my.user@email.com"
 }
 
 variable "aws_environment" {
-    ## AWS environment
+    ## AWS environment tag
     type = string
     default = "Non-Prod"
 }
@@ -47,7 +47,7 @@ variable "aws_public_subnets" {
 }
 
 variable "aws_private_subnets" {
-    ## AWS public subnets
+    ## AWS private subnets
     type = list(string)
     default = ["10.0.11.0/24", "10.0.12.0/24"]
 }
@@ -84,18 +84,12 @@ variable "xc_lb_method" {
     type = string
 }
 
-variable "backend_ips" {
-  description = "List of backend server IP addresses"
-  type        = list(string)
-  default     = ["10.0.1.10", "10.0.1.11"]
-}
-
 variable "dns_zone_name" {
-  default = "Name of DNS zone"
+  default = "Name of DNS zone to create LB record in"
   type = string
 }
 
 variable "dns_hostname" {
-  description = "DNS hostname without the domain"
+  description = "DNS hostname for LB record without the domain suffix"
   type = string
 }

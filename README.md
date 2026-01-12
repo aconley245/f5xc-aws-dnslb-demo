@@ -12,10 +12,8 @@ DNS Load Balancer to distribute traffic between the web servers.
 
 ### Clone Repo
 ```bash
-git clone git@github.com:megamattzilla/terraform-examples.git
-cd terraform-examples/azure/ubuntu-docker-host
+git https://github.com/aconley245/f5xc-aws-dnslb-demo.git
 ```
-### Setup Secrets
 
 ### Before running terraform
 Set Environment variables for your AWS environment (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)
@@ -24,3 +22,21 @@ Download an F5 Distributed Cloud p12 API certificate and save it to the director
 
 Set Environment variable for your p12 cerfiticate password (VES_P12_PASSWORD)
 
+### Run Terraform
+
+Review variables in `variables.tf` and customize as needed.
+
+Initalize providers
+```bash
+terraform init
+```
+
+Apply the changes
+```bash
+terraform apply
+```
+
+Delete everything:
+```bash
+terraform destroy
+```

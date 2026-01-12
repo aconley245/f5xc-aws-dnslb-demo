@@ -12,7 +12,7 @@ DNS Load Balancer to distribute traffic between the web servers.
 
 ### Clone Repo
 ```bash
-git https://github.com/aconley245/f5xc-aws-dnslb-demo.git
+git clone https://github.com/aconley245/f5xc-aws-dnslb-demo.git
 ```
 
 ### Before running terraform
